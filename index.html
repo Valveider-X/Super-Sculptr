@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Sculptr</title>
+    <link rel="stylesheet" href="./Styles/style.css">
+</head>
+<body>
+    <!-- PANTALLA DE INICIO -->
+    <h1>SUPER SCULPTR</h1>
+     <div id="splash-screen" class="container"> 
+        <img src="./Imagenes/placeholder inicio.jpg" width="500" alt="logo"> 
+        <p>Conforme a lo que el sufijo -cracia indica, la meritocracia es, estrictamente hablando, un sistema de gobierno basado en la habilidad (mérito) en vez de la riqueza o posición social.</p>
+        <p>Todo el mundo sabe que para hacerte rico debes trabajar duro.
+        <br>Dijo nadie Nunca.
+        </p>
+        <button id="start-btn">Hazte Rico</button>
+      </div> 
+      
+      <!-- PANTALLA DE JUEGO -->
+      <header>
+      <div id="game-screen" class="container">
+        <p id="monedas-interfaz">Monedas: 0</p>
+      </header>
+        
+
+        <!-- Elementos del juego como puntuación, vidas, etc deberia ir aqui (dentro del game-screen pero fuera del game-box) -->
+        <div id="game-box">
+            <div id="progressBar"><div id="myBar"></div>       
+            </div>
+        <!--<button id="botonBarra">Esculpir</button>-->
+        
+</div>
+<button id="boton">Click</button>
+          <!-- Los elementos del juego serán añadidos desde JS con manipulación de DOM -->
+         
+        </div>
+      </div>
+      
+      <!-- PANTALLA FINAL -->
+      <!-- <div id="game-over-screen" class="container">
+        <img src="./images/gameover.png" width="500" alt="logo">
+      </div> -->
+
+
+    
+    
+
+    <script src="./JS/main.js"></script>
+    <script src="./JS/escultura.js"></script>
+    <script src="./JS/game.js"></script>
+    <link rel="style.css">
+</body>
+</html>

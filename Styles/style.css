@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    background-color:bisque;
+    /*background-image: url("../Imagenes/fondo.jpg");*/
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+  }
+
+  #boton{ 
+    display: block;
+    place-items: center;
+    display: none;
+    margin-top: 0%;
+    
+  }
+  #progressBar{
+    width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+    background-color: grey;
+    margin-top: 60px;
+    margin-left: 80px;
+    position: absolute;
+    z-index: 999;
+    
+    
+
+  }
+  #myBar{
+    width: 1%;
+    height: 30px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: green;
+
+  }  
+  
+  #start-btn {
+    background-color: green;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    margin-top: 40px;
+    border-radius: 10px; 
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+  }
+  
+  #game-box {
+     background-color: darkgray; 
+    width:600px;
+    height:600px;
+  
+    position: relative; /* permite posicionar los elementos de forma absoluta dentro del game-box */
+    overflow: hidden; /* previene que los elementos salgan visualmente del game-box */
+    user-select: none;
+   } /* previene que los elementos del game-box sean resaltados al hacer click 
+  
+    /*background-image: url("../Imagenes/fondo.jpg");/
+    background-color:bisque;
+    background-position: center;
+    background-size: cover;
+  
+  }
+  
+  #game-box * {
+    pointer-events: none; /* previene que todos los elementos del game-box sean arrastrados al clickar sobre ellos 
+  }*/
+  
+  #game-screen, #game-over-screen {
+    display: none; /* el elemento desparece temporalmente de la pantalla */
+  }
+
+  /*BARRAS DE PROGRESO, PILLADO DE QUIZ
+  #progress {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+#progressBar {
+    height: 20px;
+    background-color: red;
+    width: 0%;
+    border-radius: 8px;
+}
+
+#result-progress {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.divider {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+#resultProgressBar {
+    width: 100%;
+    height: 20px;
+    background-color: #4caf50;
+    width: 100%;
+    border-radius: 8px;
+}*/
