@@ -52,20 +52,18 @@ function startGame() {
 }
 
 
-
+//todo solucionar problemas con el dinero, al hacer click debe dar el dinero después de la barra de progreso
 
 function botoncito(){
     progresoBarra()
-    console.log("Botón clickado Incrementando dinero")
-    const monedasInterface = document.querySelector("#monedas-interfaz")
-    setInterval(() => {
-        dinero++
-      }, 1000) 
-    //dinero++
-    monedasInterface.innerText = "Monedas: " + dinero
     console.log(`Dinero actualizado: ${dinero}`)
     
     
+}
+function incrementarDinero(){
+    dinero++
+    const monedasInterface = document.querySelector("#monedas-interfaz")
+    monedasInterface.innerText = "Monedas: " + dinero
 }
 //todo progresión barra
 function progresoBarra(){
@@ -74,10 +72,12 @@ function progresoBarra(){
         let elementoBarra = document.getElementById("myBar")
         let width = 1
         let id = setInterval(frame, 10)
+
         function frame(){
             if (width >= 100){
                 clearInterval(id)
                 barraDeProgreso = 0
+                incrementarDinero()
             }else{
                 width++
                 elementoBarra.style.width = width + "%"

@@ -1,3 +1,5 @@
+//const escultura = new Escultura()
+
 class Escultura {
 
     constructor() {
@@ -25,10 +27,11 @@ class Escultura {
       // si la palabra empieza en h, no termina en h. Viceversa.
     }
     
-
-   
    }
-
+   //todo Duplicar class con éxito
+   /*const monolito = new Escultura()
+   monolito.node.style.top = escultura.y + 20*/
+   
    //todo CLASS boton
 class Botonazo {
   constructor(){
