@@ -15,6 +15,7 @@ let dinero = 0;
 const startBtnNode = document.querySelector("#start-btn")
 const botonBarra = document.querySelector("#boton")
 
+
 //BARRAS DE PROGRESO
 let barraDeProgreso = 0;
 
@@ -66,7 +67,7 @@ function botoncito(){
     
     
 }
-
+//todo progresión barra
 function progresoBarra(){
     if (barraDeProgreso == 0){
         barraDeProgreso = 1
@@ -87,7 +88,7 @@ function progresoBarra(){
 
 //* EVENT LISTENERS
 startBtnNode.addEventListener("click", startGame)
-botonBarra.addEventListener("click", botoncito)
+botonBarra.addEventListener("click", botoncito) //ver como colocar la class Button
 console.log("Evento click asignado correctamente al botón")
 
 

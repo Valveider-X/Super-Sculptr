@@ -26,7 +26,7 @@ class Escultura {
     }
     
 
-   //todo progresión barra
+   
    }
 
    //todo CLASS boton
