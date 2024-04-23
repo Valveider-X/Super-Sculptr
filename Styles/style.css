@@ -24,11 +24,32 @@ body {
     margin-top: 60px;
     margin-left: 80px;
     position: absolute;
-    z-index: 999;
-    
-    
+   z-index: 999;
+  
 
   }
+
+  #progress {
+    width: 400px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+  }
+  
+  #progress::-webkit-progress-bar {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+  }
+  
+  #progress::-webkit-progress-value {
+    background-color: #4caf50;
+    border-radius: 10px;
+  }
+  
+  /* Estilos cuando la barra está en progreso */
+  #progress.in-progress::-webkit-progress-value {
+    background-color: #2196F3; /* Cambia el color de la barra de progreso cuando está en progreso */
+  }
+
   #myBar{
     width: 1%;
     height: 30px;
@@ -63,6 +84,7 @@ body {
     position: relative; /* permite posicionar los elementos de forma absoluta dentro del game-box */
     overflow: hidden; /* previene que los elementos salgan visualmente del game-box */
     user-select: none;
+
    } /* previene que los elementos del game-box sean resaltados al hacer click 
   
     /*background-image: url("../Imagenes/fondo.jpg");/
@@ -72,9 +94,7 @@ body {
   
   }
   
-  #game-box * {
-    pointer-events: none; /* previene que todos los elementos del game-box sean arrastrados al clickar sobre ellos 
-  }*/
+ */
   
   #game-screen, #game-over-screen {
     display: none; /* el elemento desparece temporalmente de la pantalla */

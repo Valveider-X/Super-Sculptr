@@ -6,8 +6,11 @@ class Game {
       //background CHECK
       //el ID
       
-      this.escultura = new Escultura() // el juego empieza con una barra
-      this.botonazo = new Botonazo()
+      //this.escultura = new Escultura() // el juego empieza con una barra
+      //this.botonazo = new Botonazo()
+
+      //
+      this.barrasArr = []
   
       
       
@@ -19,7 +22,31 @@ class Game {
     }
   
     // metodos
-  
+    crearEsculturas(){
+      let tiempoBucle = 100
+      let posicionBarra = 100
+      let posicionBoton = 105
+      for (let i=0; i<6; i++){
+        let incrementoTiempo = tiempoBucle + i *250
+        let incrementoPosicion = posicionBarra + i *100
+        let incrementoBoton = posicionBoton + i *100
+      let barrasEscultura = new Escultura(incrementoTiempo, incrementoPosicion, incrementoBoton)
+      this.barrasArr.push(barrasEscultura)
+
+      }
+      
+      
+
+      //let barra2 = new Escultura(escultura.y + distanciaEntreBarras)
+      //this.barrasArr.push(barra2)
+
+    }
+    botoncito(){
+      this.escultura.progresoBarra(100)
+      console.log(`Dinero actualizado: ${dinero}`)
+      
+      
+  }
 
     //todo accion de game over
     /*gameOver(){
