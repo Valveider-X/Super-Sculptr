@@ -9,13 +9,12 @@ body {
   }
 
   #boton{ 
-    display: block;
-    place-items: center;
     display: none;
+    place-items: center;
     margin-top: 0%;
     
   }
-  #progressBar{
+  /*#progressBar{
     width: 400px;
     border-radius: 10px;
     text-align: center;
@@ -27,27 +26,27 @@ body {
    z-index: 999;
   
 
-  }
+  }*/
 
   #progress {
     width: 400px;
-    background-color: #f0f0f0;
+    background-color: #d06106a2;
     border-radius: 10px;
   }
   
   #progress::-webkit-progress-bar {
-    background-color: #f0f0f0;
+    background-color: #585a58be;
     border-radius: 10px;
   }
   
   #progress::-webkit-progress-value {
-    background-color: #4caf50;
+    background-color: #51280558;;
     border-radius: 10px;
   }
   
   /* Estilos cuando la barra está en progreso */
   #progress.in-progress::-webkit-progress-value {
-    background-color: #2196F3; /* Cambia el color de la barra de progreso cuando está en progreso */
+    background-color: #3cb5348b; /* Cambia el color de la barra de progreso cuando está en progreso */
   }
 
   #myBar{
