@@ -57,13 +57,28 @@ function startGame() {
 
 
 
-function incrementarDinero(){
-    dinero++
+function incrementarDinero(x){
+    dinero ++
     const monedasInterface = document.querySelector("#monedas-interfaz")
     monedasInterface.innerText = "Monedas: " + dinero
 }
 // progresión barra
 
+//FUNCIÓN OCULTA - HACIENDA.
+
+function startCountdown(seconds) {
+    
+    let counter = seconds;
+    const timer = setInterval(()=> {
+    counter--
+  if (counter <= 0){
+        
+        clearInterval(timer)
+        window.alert("Hacienda viene a reclamar dinero")
+        
+      }
+  
+    } ,1000)}
 
 //* EVENT LISTENERS
 startBtnNode.addEventListener("click", startGame)

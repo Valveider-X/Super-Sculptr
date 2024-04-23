@@ -9,9 +9,7 @@ body {
   }
 
   #boton{ 
-    display: none;
-    place-items: center;
-    margin-top: 0%;
+    display: hide;
     
   }
   /*#progressBar{
@@ -44,12 +42,11 @@ body {
     border-radius: 10px;
   }
   
-  /* Estilos cuando la barra está en progreso */
   #progress.in-progress::-webkit-progress-value {
     background-color: #3cb5348b; /* Cambia el color de la barra de progreso cuando está en progreso */
   }
 
-  #myBar{
+ /* #myBar{
     width: 1%;
     height: 30px;
     text-align: center;
@@ -57,7 +54,7 @@ body {
     background-color: green;
 
   }  
-  
+  */
   #start-btn {
     background-color: green;
     color: white;

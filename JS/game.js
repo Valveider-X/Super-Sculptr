@@ -26,12 +26,20 @@ class Game {
       let tiempoBucle = 100
       let posicionBarra = 100
       let posicionBoton = 105
+      let valoresDinero = [1, 10, 50, 100, 300]
+      let dineroActual = 0
+
       for (let i=0; i<6; i++){
         let incrementoTiempo = tiempoBucle + i *250
         let incrementoPosicion = posicionBarra + i *100
         let incrementoBoton = posicionBoton + i *100
-      let barrasEscultura = new Escultura(incrementoTiempo, incrementoPosicion, incrementoBoton)
+        let dineroActualizado = valoresDinero[i]
+
+     
+      let barrasEscultura = new Escultura(incrementoTiempo, incrementoPosicion, incrementoBoton, dineroActual)
       this.barrasArr.push(barrasEscultura)
+
+      dineroActual += dineroActualizado
 
       }
       
@@ -70,8 +78,11 @@ class Game {
     }
   
     start() {
+      startCountdown(10)
+      
       this.gameIntervalId = setInterval(() => {
         this.gameLoop()
+        
       }, Math.round(1000/60)) // 60fps
     }
   

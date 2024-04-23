@@ -2,7 +2,7 @@
 
 class Escultura {
 
-    constructor(miliSegundos, y, yBoton) {
+    constructor(miliSegundos, y, yBoton, dinero) {
   
       // nodo
       this.node = document.createElement("img")
@@ -51,7 +51,7 @@ class Escultura {
       this.botonNode = document.createElement("img")
       this.botonNode.id = "botonazo" // opcional
       // imagen
-      this.botonNode.src = "./imagenes/buttonRound_block.png"
+      this.botonNode.src = "./imagenes/buttonRound_brown.png"
 
       gameBoxNode.append(this.botonNode)
 
@@ -69,10 +69,10 @@ class Escultura {
       console.log(this.botonNode);
 
       this.botonNode.addEventListener("click",() => {
-        console.log("funcionando")
-        this.progresoBarra(miliSegundos)
+        this.progresoBarra(miliSegundos, dinero)
 
       })
+
 
 
     }
@@ -84,14 +84,17 @@ class Escultura {
       if (!this.barraNode.classList.contains("in-progress")){
           this.barraNode.classList.add("in-progress")
           let width = 0
+          let dinero = this.dinero;
+          
 
           let id = setInterval(() => { //la duración de la barra 
-  
-          
               if (width >= 100){
                   clearInterval(id)
                   this.barraNode.classList.remove("in-progress")
-                  incrementarDinero()
+                  dinero ++
+                  incrementarDinero(dinero)
+                  this.dinero = dinero
+                  
               }else{
                   width++
                  this.barraNode.value = width;
