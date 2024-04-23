@@ -1,14 +1,16 @@
 body {
     margin: 0;
     background-color:bisque;
-    /*background-image: url("../Imagenes/fondo.jpg");*/
+    background-image: url("../Imagenes/inicio.jpg");
     background-position: center;
-    background-size: cover;
+    /*background-size: cover;*/
     display: grid;
     place-items: center;
   }
 
   #boton{ 
+    color: rgba(241, 210, 170, 0.195);
+    background-color: rgba(241, 210, 170, 0.195);
     display: hide;
     
   }
@@ -56,12 +58,13 @@ body {
   }  
   */
   #start-btn {
-    background-color: green;
+    background-color: rgb(152, 92, 53);
     color: white;
-    padding: 20px;
+    padding: 30px;
     font-size: 20px;
     margin-top: 40px;
     border-radius: 10px; 
+    margin-bottom: -50px
   }
   
   .container {
@@ -71,9 +74,10 @@ body {
     align-items: center;
     margin: 50px;
   }
-  
+  /* fondo del juego aqui*/
   #game-box {
-     background-color: darkgray; 
+    color: rgba(241, 210, 170, 0.195);
+    background-color: rgba(241, 210, 170, 0.195);
     width:600px;
     height:600px;
   
