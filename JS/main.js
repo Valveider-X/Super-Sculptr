@@ -59,8 +59,8 @@ function startGame() {
 
 
 
-function incrementarDinero(x){
-    dinero ++
+function incrementarDinero(dineroASumar){
+    dinero += dineroASumar
     const monedasInterface = document.querySelector("#monedas-interfaz")
     monedasInterface.innerText = "Monedas: " + dinero
 }

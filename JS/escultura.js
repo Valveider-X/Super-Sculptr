@@ -1,14 +1,14 @@
 //const escultura = new Escultura()
-
+//todo arreglar imagenes para github
 class Escultura {
 
-    constructor(miliSegundos, y, yBoton, dinero) {
-  
+    constructor(miliSegundos, y, yBoton, dineroASumar) {
+
       // nodo
       this.node = document.createElement("img")
       this.node.id = "escultura" // opcional
       // imagen
-      this.node.src = "../Imagenes/panel_brown.png"
+      this.node.src = "./Imagenes/panel_brown.png"
       // desde JS las busquedas de imagenes siempre con "./"
   
       gameBoxNode.append(this.node) // esto añade el nodo de la barra al game-box
@@ -25,6 +25,10 @@ class Escultura {
       this.node.style.width = `${this.w}px`
       this.node.style.height = `${this.h}px`
       // si la palabra empieza en h, no termina en h. Viceversa.
+
+    //DINEROS
+    this.dineroASumar = dineroASumar
+
 
     ///Barra
     this.barraNode = document.createElement("progress")
@@ -51,7 +55,7 @@ class Escultura {
       this.botonNode = document.createElement("img")
       this.botonNode.id = "botonazo" // opcional
       // imagen
-      this.botonNode.src = "../Imagenes/buttonRound_brown.png"
+      this.botonNode.src = "./Imagenes/buttonRound_brown.png"
 
       gameBoxNode.append(this.botonNode)
 
@@ -66,11 +70,10 @@ class Escultura {
   
       this.botonNode.style.width = `${this.w}px`
       this.botonNode.style.height = `${this.h}px`
-      console.log(this.botonNode);
+      //console.log(this.botonNode);
 
       this.botonNode.addEventListener("click",() => {
-        this.progresoBarra(miliSegundos, dinero)
-
+        this.progresoBarra(miliSegundos)
       })
 
 
@@ -84,16 +87,16 @@ class Escultura {
       if (!this.barraNode.classList.contains("in-progress")){
           this.barraNode.classList.add("in-progress")
           let width = 0
-          let dinero = this.dinero;
+         // let dinero = this.dinero;
           
 
           let id = setInterval(() => { //la duración de la barra 
               if (width >= 100){
                   clearInterval(id)
                   this.barraNode.classList.remove("in-progress")
-                  dinero ++
-                  incrementarDinero(dinero)
-                  this.dinero = dinero
+
+                  incrementarDinero(this.dineroASumar)
+                  //this.dinero = dinero
                   
               }else{
                   width++

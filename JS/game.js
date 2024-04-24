@@ -27,19 +27,18 @@ class Game {
       let posicionBarra = 100
       let posicionBoton = 105
       let valoresDinero = [1, 10, 50, 100, 300]
-      let dineroActual = 0
+      
 
-      for (let i=0; i<6; i++){
+      for (let i=0; i<=4; i++){
         let incrementoTiempo = tiempoBucle + i *250
         let incrementoPosicion = posicionBarra + i *100
         let incrementoBoton = posicionBoton + i *100
-        let dineroActualizado = valoresDinero[i]
+        let dineroASumar = valoresDinero[i]
+        console.log(dineroASumar);
 
      
-      let barrasEscultura = new Escultura(incrementoTiempo, incrementoPosicion, incrementoBoton, dineroActual)
+      let barrasEscultura = new Escultura(incrementoTiempo, incrementoPosicion, incrementoBoton, dineroASumar)
       this.barrasArr.push(barrasEscultura)
-
-      dineroActual += dineroActualizado
 
       }
       
