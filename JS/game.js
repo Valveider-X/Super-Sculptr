@@ -26,8 +26,10 @@ class Game {
         incrementoBoton,
         dineroASumar
       );
-      this.barrasArr.push(barrasEscultura);  
+      this.barrasArr.push(barrasEscultura);
+      barrasEscultura.chequeoBotones()  
     }
+    
     /*this.barrasArr.forEach(escultura => {
       escultura.chequeoBotones()
     })*/
@@ -36,6 +38,7 @@ class Game {
   }
   botoncito() {
     this.escultura.progresoBarra(100);
+  
     
     console.log(`Dinero actualizado: ${dinero}`);
   }
@@ -57,11 +60,10 @@ class Game {
     // score
 
   gameLoop() {
-    if (this.escultura){
-      this.escultura.chequeoBotones()
-    }
+    
+    
     //console.log("juego andando")
-    //escultura.chequeoBotones()
+   
   }
 
   start() {

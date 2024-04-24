@@ -86,7 +86,7 @@ class Escultura {
     this.barraNode.value = nuevoProgreso*/ //meter esto
 
   progresoBarra(miliSegundos) {
-    this.chequeoBotones()
+    //this.chequeoBotones()
     if (!this.barraNode.classList.contains("in-progress")) {
       this.barraNode.classList.add("in-progress");
       let width = 0;
@@ -97,9 +97,10 @@ class Escultura {
         if (width >= 100) {
           clearInterval(id);
           this.barraNode.classList.remove("in-progress");
+          //this.chequeoBotones();
 
           incrementarDinero(this.dineroASumar);
-          //this.dinero = dinero
+          this.chequeoBotones()
         } else {
           width++;
           this.barraNode.value = width;
@@ -111,48 +112,58 @@ class Escultura {
   chequeoBotones(){
     //console.log("valor dinero sumar", this.dineroASumar);
     let todosLosBotones = document.querySelectorAll(".botonazo")
-    todosLosBotones.forEach( boton => {
-      boton.disabled = true
-      boton.style.pointerEvents = "none"
-      boton.style.opacity = "0.5"
-      boton.addEventListener("click", function(bloquear){
-        bloquear.preventDefault()
+
+    todosLosBotones.forEach((botonNode, index) => {
+      botonNode.disabled = true
+      botonNode.style.pointerEvents = "none" //bloquea pointerEvents
+      botonNode.style.opacity = "0.5"
+      if (dinero >= index * 5){
+        botonNode.disabled = false
+        botonNode.style.pointerEvents = "auto"
+        botonNode.style.opacity = "1"
+      }
+        
 
       })
       
       //console.log("botón desactivado",boton)
-    })
-    if (this.dineroASumar >= 0){
-      console.log("activando boton 0")
-      
-        todosLosBotones[0].parentNode.disabled = false
-        todosLosBotones[0].style.pointerEvents = "auto"
-        todosLosBotones[0].style.opacity = "1"
-        // a todosLosBotones[0].disabled = false
-      //}
-    }if (this.dineroASumar >= 10){
-      console.log("activando boton 01")
-      todosLosBotones[4].parentNode.disabled = false
+    }
+    /*if (this.dineroASumar >= 150){
+      console.log("activando boton 04")
+      todosLosBotones[4].disabled = false
       todosLosBotones[4].style.pointerEvents = "auto"
       todosLosBotones[4].style.opacity = "1"
-    }if (this.dineroASumar >= 50){
-      console.log("activando boton 02")
-      todosLosBotones[3].parentNode.disabled = false
+      console.log(`sumando ${this.dineroASumar}`)
+      //console.log("todos los botones desactivados")
+    }else if (this.dineroASumar >= 100){
+      console.log("activando boton 03")
+      todosLosBotones[3].disabled = false
       todosLosBotones[3].style.pointerEvents = "auto"
       todosLosBotones[3].style.opacity = "1"
-    }if (this.dineroASumar >= 100){
-      console.log("activando boton 03")
-      todosLosBotones[2].parentNode.disabled = false
+      console.log(`sumando ${this.dineroASumar}`)
+    }else if (this.dineroASumar >= 50){
+      console.log("activando boton 02")
+      todosLosBotones[2].disabled = false
       todosLosBotones[2].style.pointerEvents = "auto"
       todosLosBotones[2].style.opacity = "1"
-    }if (this.dineroASumar >= 150){
-      console.log("activando boton 04")
-      todosLosBotones[1].parentNode.disabled = false
+      console.log(`sumando ${this.dineroASumar}`)
+    }else if (this.dineroASumar >= 10){
+      console.log("activando boton 01")
+      todosLosBotones[1].disabled = false
       todosLosBotones[1].style.pointerEvents = "auto"
       todosLosBotones[1].style.opacity = "1"
-      //console.log("todos los botones desactivados")
+      console.log(`sumando ${this.dineroASumar}`)
+    }else if (this.dineroASumar >= 0){
+      console.log("activando boton 0")
+      
+        todosLosBotones[0].disabled = false
+        todosLosBotones[0].style.pointerEvents = "auto"
+        todosLosBotones[0].style.opacity = "1"
+        console.log(`sumando ${this.dineroASumar}`)
+        // a todosLosBotones[0].disabled = false
+      //}
+    }*/
   }
-}
   
 
   /*progresoBarra(miliSegundos){ //cuando llamemos a la funcion hay que declarar el tiempo de progreso barra
@@ -174,6 +185,6 @@ class Escultura {
           }
       }
   }*/
-}
+//}
 
 

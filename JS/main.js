@@ -43,11 +43,12 @@ function startGame() {
   //3. iniciar el juego
 
   game = new Game();
+  game.crearEsculturas();
 
 
   //console.log(game)
   game.start();
-  game.crearEsculturas();
+  
  
 
 }
@@ -56,7 +57,10 @@ function incrementarDinero(dineroASumar) {
   dinero += dineroASumar;
   const monedasInterface = document.querySelector("#monedas-interfaz");
   monedasInterface.innerText = "Monedas: " + dinero;
-}
+  
+
+  };
+
 // progresión barra
 
 //FUNCION DESBLOQUEO
@@ -82,3 +86,15 @@ startBtnNode.addEventListener("click", startGame);
     game.botoncito()
 }) //ver como colocar la class Button
 console.log("Evento click asignado correctamente al botón")*/
+
+/*
+function muelte(segundos) {
+  let pacoCounter = segundos;
+  const timer = setInterval(() => {
+    pacoCounter--;
+    if (pacoCounter <= 0) {
+      clearInterval(timer);
+      window.alert("Dale F5 pa continuar");
+    }
+  }, 10);
+}*/
