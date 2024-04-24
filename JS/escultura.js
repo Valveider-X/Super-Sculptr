@@ -8,7 +8,7 @@ class Escultura {
       this.node = document.createElement("img")
       this.node.id = "escultura" // opcional
       // imagen
-      this.node.src = "./Imagenes/panel_brown.png"
+      this.node.src = "../Imagenes/panel_brown.png"
       // desde JS las busquedas de imagenes siempre con "./"
   
       gameBoxNode.append(this.node) // esto añade el nodo de la barra al game-box
@@ -51,7 +51,7 @@ class Escultura {
       this.botonNode = document.createElement("img")
       this.botonNode.id = "botonazo" // opcional
       // imagen
-      this.botonNode.src = "./Imagenes/buttonRound_brown.png"
+      this.botonNode.src = "../Imagenes/buttonRound_brown.png"
 
       gameBoxNode.append(this.botonNode)
 
