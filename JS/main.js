@@ -4,6 +4,7 @@
 // pantallas
 const splashScreenNode = document.querySelector("#splash-screen")
 const gameScreenNode = document.querySelector("#game-screen")
+
 //const gameOverScreenNode = document.querySelector("#game-over-screen")
 
 
@@ -39,9 +40,10 @@ function startGame() {
 
   //2. mostrar la pantalla de juego
   gameScreenNode.style.display = "flex"
+  gameBoxNode.style.display = "flex"
 
   //3. mostrar el botón de barra
-  botonBarra.style.display = "flex"
+  botonBarra.style.display = "none"
 
   //3. iniciar el juego
   

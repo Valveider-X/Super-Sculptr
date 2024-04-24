@@ -1,17 +1,20 @@
 body {
-    margin: 0;
     background-color:bisque;
     background-image: url("../Imagenes/inicio.jpg");
     background-position: center;
-    /*background-size: cover;*/
-    display: grid;
-    place-items: center;
+    background-size: 100%;
+    background-position: 10% 0;
+    /*display: grid;*/
+    /*place-items: center;*/
+  }
+  #logo{
+    margin-left: 100px;
   }
 
   #boton{ 
     color: rgba(241, 210, 170, 0.195);
     background-color: rgba(241, 210, 170, 0.195);
-    display: hide;
+    display: none;
     
   }
   /*#progressBar{
@@ -76,6 +79,7 @@ body {
   }
   /* fondo del juego aqui*/
   #game-box {
+    display: none;
     color: rgba(241, 210, 170, 0.195);
     background-color: rgba(241, 210, 170, 0.195);
     width:600px;
