@@ -10,7 +10,16 @@ body {
 #logo {
   margin-left: 100px;
 }
+.musica{
+  margin-left: 170px;
+  
+  /*display: flex;
+  align-items: center;*/
+  
+  
+  
 
+}
 #boton {
   color: rgba(241, 210, 170, 0.195);
   background-color: rgba(241, 210, 170, 0.195);

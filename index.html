@@ -21,6 +21,7 @@
       <!-- PANTALLA DE JUEGO -->
       <header>
       <div id="game-screen" class="container">
+        
         <p id="monedas-interfaz">Monedas: 0</p>
         <p id="hacienda">Siguiente Objetivo: 0</p>
       </header>
@@ -32,8 +33,9 @@
             </div>
         <button id="botonBarra">Esculpir</button>-->
         
-</div>
-<button id="boton">---</button>
+</div><audio id="m" src="./audio/cansado.mp3"></audio>
+<button id="boton" onclick="document.getElementById('m').play()">----</button>
+<div class="musica"><audio controls autoplay muted><source src="./audio/music.mp3" type="audio/mpeg"></audio></div>
            <!--Los elementos del juego serán añadidos desde JS con manipulación de DOM -->
          
         </div>
