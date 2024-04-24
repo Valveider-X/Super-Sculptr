@@ -1,62 +1,48 @@
 class Game {
-
-    // propiedades
-    constructor() {
-  
-      //background CHECK
-      //el ID
-      
-      //this.escultura = new Escultura() // el juego empieza con una barra
-      //this.botonazo = new Botonazo()
-
-      //
-      this.barrasArr = []
-  
-      
-      
-  
-      //ids de intervalos
-      //this.gameIntervalId;
-//this.tuberiasIntervalId;
-  
-    }
-  
-    // metodos
-    crearEsculturas(){
-      let tiempoBucle = 100
-      let posicionBarra = 100
-      let posicionBoton = 105
-      let valoresDinero = [1, 10, 50, 100, 300]
-      
-
-      for (let i=0; i<=4; i++){
-        let incrementoTiempo = tiempoBucle + i *250
-        let incrementoPosicion = posicionBarra + i *100
-        let incrementoBoton = posicionBoton + i *100
-        let dineroASumar = valoresDinero[i]
-        console.log(dineroASumar);
-
-     
-      let barrasEscultura = new Escultura(incrementoTiempo, incrementoPosicion, incrementoBoton, dineroASumar)
-      this.barrasArr.push(barrasEscultura)
-
-      }
-      
-      
-
-      //let barra2 = new Escultura(escultura.y + distanciaEntreBarras)
-      //this.barrasArr.push(barra2)
-
-    }
-    botoncito(){
-      this.escultura.progresoBarra(100)
-      console.log(`Dinero actualizado: ${dinero}`)
-      
-      
+  // propiedades
+  constructor() {
+    this.barrasArr = [];
   }
 
-    //todo accion de game over
-    /*gameOver(){
+  // metodos
+  crearEsculturas() {
+    let tiempoBucle = 100;
+    let posicionBarra = 100;
+    let posicionBoton = 105;
+    let valoresDinero = [1, 10, 50, 100, 300];
+    
+    
+
+    for (let i = 0; i <= 4; i++) {
+      let incrementoTiempo = tiempoBucle + i * 250;
+      let incrementoPosicion = posicionBarra + i * 100;
+      let incrementoBoton = posicionBoton + i * 100;
+      let dineroASumar = valoresDinero[i];
+      console.log(dineroASumar);
+
+      let barrasEscultura = new Escultura(
+        incrementoTiempo,
+        incrementoPosicion,
+        incrementoBoton,
+        dineroASumar
+      );
+      this.barrasArr.push(barrasEscultura);
+      barrasEscultura.chequeoBotones()
+      
+     
+      
+    }
+    
+
+  }
+  botoncito() {
+    this.escultura.progresoBarra(100);
+    
+    console.log(`Dinero actualizado: ${dinero}`);
+  }
+
+  //todo accion de game over
+  /*gameOver(){
       //1 - todos los intervalos deben detenerse
       clearInterval(this.gameIntervalId)
       clearInterval(this.tuberiasIntervalId)
@@ -64,27 +50,24 @@ class Game {
       gameScreenNode.style.display = "none"
       //3- mostrar la pantalla final
       gameOverScreenNode.style.display = "flex"
-    }
+    }*/
   
   
     //* BONUS
     // sonidos y musica
-    // score*/
-  
-    gameLoop() {
-      //console.log("juego andando")
-  
-    }
-  
-    start() {
-      startCountdown(10)
-      
-      this.gameIntervalId = setInterval(() => {
-        this.gameLoop()
-        
-      }, Math.round(1000/60)) // 60fps
-    }
-  
+    // score
+
+  gameLoop() {
+    //console.log("juego andando")
   }
-  
-  //Etiqueta de progreso JS se llama progress(echar un vistazo)
+
+  start() {
+    //!
+    //startCountdown(10);
+
+    this.gameIntervalId = setInterval(() => {
+      this.gameLoop();
+    }, Math.round(1000 / 60)); // 60fps
+  }
+}
+

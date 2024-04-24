@@ -1,23 +1,27 @@
 body {
-    background-color:bisque;
-    background-image: url("../Imagenes/inicio.jpg");
-    background-position: center;
-    background-size: 100%;
-    background-position: 10% 0;
-    /*display: grid;*/
-    /*place-items: center;*/
-  }
-  #logo{
-    margin-left: 100px;
-  }
+  background-color: bisque;
+  background-image: url("../Imagenes/inicio.jpg");
+  background-position: center;
+  background-size: 100%;
+  background-position: 10% 0;
+  /*display: grid;*/
+  /*place-items: center;*/
+}
+#logo {
+  margin-left: 100px;
+}
+/*#botonazo {
+  
+  /*display: disabled;
+  
 
-  #boton{ 
-    color: rgba(241, 210, 170, 0.195);
-    background-color: rgba(241, 210, 170, 0.195);
-    display: none;
-    
-  }
-  /*#progressBar{
+}*/
+#boton {
+  color: rgba(241, 210, 170, 0.195);
+  background-color: rgba(241, 210, 170, 0.195);
+  display: none;
+}
+/*#progressBar{
     width: 400px;
     border-radius: 10px;
     text-align: center;
@@ -31,27 +35,27 @@ body {
 
   }*/
 
-  #progress {
-    width: 400px;
-    background-color: #d06106a2;
-    border-radius: 10px;
-  }
-  
-  #progress::-webkit-progress-bar {
-    background-color: #585a58be;
-    border-radius: 10px;
-  }
-  
-  #progress::-webkit-progress-value {
-    background-color: #51280558;;
-    border-radius: 10px;
-  }
-  
-  #progress.in-progress::-webkit-progress-value {
-    background-color: #3cb5348b; /* Cambia el color de la barra de progreso cuando está en progreso */
-  }
+#progress {
+  width: 400px;
+  background-color: #d06106a2;
+  border-radius: 10px;
+}
 
- /* #myBar{
+#progress::-webkit-progress-bar {
+  background-color: #585a58be;
+  border-radius: 10px;
+}
+
+#progress::-webkit-progress-value {
+  background-color: #51280558;
+  border-radius: 10px;
+}
+
+#progress.in-progress::-webkit-progress-value {
+  background-color: #3cb5348b; /* Cambia el color de la barra de progreso cuando está en progreso */
+}
+
+/* #myBar{
     width: 1%;
     height: 30px;
     text-align: center;
@@ -60,36 +64,35 @@ body {
 
   }  
   */
-  #start-btn {
-    background-color: rgb(152, 92, 53);
-    color: white;
-    padding: 30px;
-    font-size: 20px;
-    margin-top: 40px;
-    border-radius: 10px; 
-    margin-bottom: -50px
-  }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 50px;
-  }
-  /* fondo del juego aqui*/
-  #game-box {
-    display: none;
-    color: rgba(241, 210, 170, 0.195);
-    background-color: rgba(241, 210, 170, 0.195);
-    width:600px;
-    height:600px;
-  
-    position: relative; /* permite posicionar los elementos de forma absoluta dentro del game-box */
-    overflow: hidden; /* previene que los elementos salgan visualmente del game-box */
-    user-select: none;
+#start-btn {
+  background-color: rgb(152, 92, 53);
+  color: white;
+  padding: 30px;
+  font-size: 20px;
+  margin-top: 40px;
+  border-radius: 10px;
+  margin-bottom: -50px;
+}
 
-   } /* previene que los elementos del game-box sean resaltados al hacer click 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+/* fondo del juego aqui*/
+#game-box {
+  display: none;
+  color: rgba(241, 210, 170, 0.195);
+  background-color: rgba(241, 210, 170, 0.195);
+  width: 600px;
+  height: 600px;
+
+  position: relative; /* permite posicionar los elementos de forma absoluta dentro del game-box */
+  overflow: hidden; /* previene que los elementos salgan visualmente del game-box */
+  user-select: none;
+} /* previene que los elementos del game-box sean resaltados al hacer click 
   
     /*background-image: url("../Imagenes/fondo.jpg");/
     background-color:bisque;
@@ -99,12 +102,13 @@ body {
   }
   
  */
-  
-  #game-screen, #game-over-screen {
-    display: none; /* el elemento desparece temporalmente de la pantalla */
-  }
 
-  /*BARRAS DE PROGRESO, PILLADO DE QUIZ
+#game-screen,
+#game-over-screen {
+  display: none; /* el elemento desparece temporalmente de la pantalla */
+}
+
+/*BARRAS DE PROGRESO, PILLADO DE QUIZ
   #progress {
     width: 100%;
     background-color: #ddd;
