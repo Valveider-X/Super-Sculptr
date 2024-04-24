@@ -10,16 +10,11 @@ body {
 #logo {
   margin-left: 100px;
 }
-/*#botonazo {
-  
-  /*display: disabled;
-  
 
-}*/
 #boton {
   color: rgba(241, 210, 170, 0.195);
   background-color: rgba(241, 210, 170, 0.195);
-  display: none;
+  /*display: none;*/
 }
 /*#progressBar{
     width: 400px;
@@ -83,13 +78,22 @@ body {
 }
 /* fondo del juego aqui*/
 #game-box {
+  /*background-image: url("../Imagenes/panel_fondo.png");
+  background-position: center;
+  background-size: cover;*/
   display: none;
-  color: rgba(241, 210, 170, 0.195);
-  background-color: rgba(241, 210, 170, 0.195);
+
+  color: rgba(241, 210, 170, 0.555);
+  background-color: rgba(241, 210, 170, 0.674);
+  border:solid 10px rgba(81, 56, 24, 0.421);
+  border-radius: 30px;
+  /*display: flex;*/
+  align-items: center;
+  
   width: 600px;
   height: 600px;
 
-  position: relative; /* permite posicionar los elementos de forma absoluta dentro del game-box */
+  position: relative;  /*permite posicionar los elementos de forma absoluta dentro del game-box */
   overflow: hidden; /* previene que los elementos salgan visualmente del game-box */
   user-select: none;
 } /* previene que los elementos del game-box sean resaltados al hacer click 

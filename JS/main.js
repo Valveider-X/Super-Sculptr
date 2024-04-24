@@ -43,9 +43,12 @@ function startGame() {
   //3. iniciar el juego
 
   game = new Game();
+
+
   //console.log(game)
   game.start();
   game.crearEsculturas();
+ 
 
 }
 

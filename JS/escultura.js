@@ -46,7 +46,15 @@ class Escultura {
 
     this.barraNode.style.width = `${this.w}px`;
     this.barraNode.style.height = `${this.h}px`;
-
+    //IMAGENES BARRA(PRUEBA)
+    this.imagenNode = document.createElement("img")
+    this.imagenNode.src = "./Imagenes/sculpt1.png"
+    this.imagenNode.style.position = "absolute"
+    this.imagenNode.style.left = `${this.x - 70}px`
+    this.imagenNode.style.top = `${this.y - 30}px`
+    this.imagenNode.style.width = "40px"
+    this.imagenNode.style.height = "80px"
+    gameBoxNode.appendChild(this.imagenNode)
     ///BOTON
     
     this.botonNode = document.createElement("img");
@@ -78,6 +86,7 @@ class Escultura {
     this.barraNode.value = nuevoProgreso*/ //meter esto
 
   progresoBarra(miliSegundos) {
+    this.chequeoBotones()
     if (!this.barraNode.classList.contains("in-progress")) {
       this.barraNode.classList.add("in-progress");
       let width = 0;
@@ -100,25 +109,48 @@ class Escultura {
   }
 
   chequeoBotones(){
+    //console.log("valor dinero sumar", this.dineroASumar);
     let todosLosBotones = document.querySelectorAll(".botonazo")
     todosLosBotones.forEach( boton => {
-      boton.style.disabled = true
-      console.log(todosLosBotones)
-      console.log(todosLosBotones.length)
-      console.log(boton)
+      boton.disabled = true
+      boton.style.pointerEvents = "none"
+      boton.style.opacity = "0.5"
+      boton.addEventListener("click", function(bloquear){
+        bloquear.preventDefault()
+
+      })
+      
+      //console.log("botón desactivado",boton)
     })
-    if (this.dineroASumar === 0){
-      //if (todosLosBotones.length > 0){
-        todosLosBotones[0].disabled = false
+    if (this.dineroASumar >= 0){
+      console.log("activando boton 0")
+      
+        todosLosBotones[0].parentNode.disabled = false
+        todosLosBotones[0].style.pointerEvents = "auto"
+        todosLosBotones[0].style.opacity = "1"
+        // a todosLosBotones[0].disabled = false
       //}
-    }else if (this.dineroASumar >= 10){
-      todosLosBotones[1].disabled = false
-    }else if (this.dineroASumar >= 50){
-      todosLosBotones[2].disabled = false
-    }else if (this.dineroASumar >= 100){
-      todosLosBotones[3].disabled = false
-    }else if (this.dineroASumar >= 150){
-      todosLosBotones[4].disabled = false
+    }if (this.dineroASumar >= 10){
+      console.log("activando boton 01")
+      todosLosBotones[4].parentNode.disabled = false
+      todosLosBotones[4].style.pointerEvents = "auto"
+      todosLosBotones[4].style.opacity = "1"
+    }if (this.dineroASumar >= 50){
+      console.log("activando boton 02")
+      todosLosBotones[3].parentNode.disabled = false
+      todosLosBotones[3].style.pointerEvents = "auto"
+      todosLosBotones[3].style.opacity = "1"
+    }if (this.dineroASumar >= 100){
+      console.log("activando boton 03")
+      todosLosBotones[2].parentNode.disabled = false
+      todosLosBotones[2].style.pointerEvents = "auto"
+      todosLosBotones[2].style.opacity = "1"
+    }if (this.dineroASumar >= 150){
+      console.log("activando boton 04")
+      todosLosBotones[1].parentNode.disabled = false
+      todosLosBotones[1].style.pointerEvents = "auto"
+      todosLosBotones[1].style.opacity = "1"
+      //console.log("todos los botones desactivados")
   }
 }
   
@@ -143,13 +175,5 @@ class Escultura {
       }
   }*/
 }
-//todo Duplicar class con éxito
-/*const monolito = new Escultura()
-   monolito.node.style.top = escultura.y + 20*/
 
-//todo CLASS boton
-class Botonazo {
-  constructor() {
-    //nodo
-  }
-}
+
