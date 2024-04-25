@@ -1,7 +1,5 @@
-//const escultura = new Escultura()
 //todo arreglar imagenes para github
 class Escultura {
-  
   constructor(miliSegundos, y, yBoton, dineroASumar) {
     // nodo
     this.node = document.createElement("img");
@@ -12,7 +10,7 @@ class Escultura {
 
     gameBoxNode.append(this.node); // esto añade el nodo de la barra al game-box
 
-    this.x = 50; // posicion eje x lateral
+    this.x = 65; // posicion eje x lateral
     this.y = y; // posicion eje y vertical
     this.w = 500; // ancho
     this.h = 50; // alto*/
@@ -47,16 +45,16 @@ class Escultura {
     this.barraNode.style.width = `${this.w}px`;
     this.barraNode.style.height = `${this.h}px`;
     //IMAGENES BARRA(PRUEBA)
-    this.imagenNode = document.createElement("img")
-    this.imagenNode.src = "./Imagenes/sculpt1.png"
-    this.imagenNode.style.position = "absolute"
-    this.imagenNode.style.left = `${this.x - 70}px`
-    this.imagenNode.style.top = `${this.y - 30}px`
-    this.imagenNode.style.width = "40px"
-    this.imagenNode.style.height = "80px"
-    gameBoxNode.appendChild(this.imagenNode)
+    this.imagenNode = document.createElement("img");
+    this.imagenNode.src = "./Imagenes/sculpt1.png";
+    this.imagenNode.style.position = "absolute";
+    this.imagenNode.style.left = `${this.x - 70}px`;
+    this.imagenNode.style.top = `${this.y - 30}px`;
+    this.imagenNode.style.width = "40px";
+    this.imagenNode.style.height = "80px";
+    gameBoxNode.appendChild(this.imagenNode);
     ///BOTON
-    
+
     this.botonNode = document.createElement("img");
     this.botonNode.className = "botonazo"; // opcional
     // imagen
@@ -82,8 +80,6 @@ class Escultura {
     });
   }
   //METODOS
-  /*actualizarProgreso(nuevoProgreso)
-    this.barraNode.value = nuevoProgreso*/ //meter esto
 
   progresoBarra(miliSegundos) {
     //this.chequeoBotones()
@@ -100,7 +96,7 @@ class Escultura {
           //this.chequeoBotones();
 
           incrementarDinero(this.dineroASumar);
-          this.chequeoBotones()
+          this.chequeoBotones();
         } else {
           width++;
           this.barraNode.value = width;
@@ -109,23 +105,22 @@ class Escultura {
     }
   }
 
-  chequeoBotones(){
+  chequeoBotones() {
     //console.log("valor dinero sumar", this.dineroASumar);
-    let todosLosBotones = document.querySelectorAll(".botonazo")
+    let todosLosBotones = document.querySelectorAll(".botonazo");
 
     todosLosBotones.forEach((botonNode, index) => {
-      botonNode.disabled = true
-      botonNode.style.pointerEvents = "none" //bloquea pointerEvents
-      botonNode.style.opacity = "0.5"
-      if (dinero >= index * 5){
-        botonNode.disabled = false
-        botonNode.style.pointerEvents = "auto"
-        botonNode.style.opacity = "1"
+      botonNode.disabled = true;
+      botonNode.style.pointerEvents = "none"; //bloquea pointerEvents
+      botonNode.style.opacity = "0.5";
+      if (dinero >= index * 5) {
+        botonNode.disabled = false;
+        botonNode.style.pointerEvents = "auto";
+        botonNode.style.opacity = "1";
       }
-      })
-      
-    }
-    /*if (this.dineroASumar >= 150){
+    });
+  }
+  /*if (this.dineroASumar >= 150){
       console.log("activando boton 04")
       todosLosBotones[4].disabled = false
       todosLosBotones[4].style.pointerEvents = "auto"
@@ -160,6 +155,4 @@ class Escultura {
         // a todosLosBotones[0].disabled = false
       //}
     }*/
-  }
-
-
+}

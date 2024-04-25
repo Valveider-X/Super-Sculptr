@@ -4,60 +4,94 @@ body {
   background-position: center;
   background-size: 100%;
   background-position: 10% 0;
-  /*display: grid;*/
-  /*place-items: center;*/
 }
 #logo {
   text-align: center;
-  
-  
 }
-#musica{
+#musica {
   margin-left: auto;
   position: absolute;
   bottom: 0;
-  
- /*display: flex;
-  align-items: center;*/
-
 }
-#musica::-webkit-media-controls-panel { /*cambias lo de dentro del reproductor*/
+#musica::-webkit-media-controls-panel {
+  /*cambias lo de dentro del reproductor*/
   background-color: rgb(212, 180, 140);
 }
-
-
 
 #boton {
   color: rgba(241, 210, 170, 0.195);
   background-color: rgba(241, 210, 170, 0.195);
-  border:none;
+  border: none;
   /*display: none;*/
 }
-.modal{
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+#myBtn2 {
+  display: none;
+  color: rgba(241, 210, 170, 0.195);
+  background-color: rgba(241, 210, 170, 0.195);
+  margin-right: 300px;
+
+  width: 20px;
+  height: 20px;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modalPay {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 .modal-content {
   background-image: url("../Imagenes/misiva.png");
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 15% auto;
   padding: 20px;
-  width: 450px; 
-  height: 300px/* Could be more or less, depending on screen size */
+  width: 450px;
+  height: 300px;
 }
-#texto-misiva{
+.modal-content2 {
+  width: 600px;
+  height: 500px;
+  background-image: url("../Imagenes/cobrador.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+  z-index: 9999;
+
+  margin: 15% auto;
+  padding: 50px;
+}
+
+#texto-misiva {
   margin-top: 80px;
   margin-left: 40px;
   line-height: 3em;
   font-weight: bold;
-  
+}
+#texto-hacienda {
+  margin-top: 260px;
+  margin-left: 40px;
+  line-height: 2em;
+  font-size: 2em;
+
+  color: rgb(255, 255, 255);
+  text-shadow: -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000,
+    2px 2px 0 #000000;
 }
 .close {
   color: #050505;
@@ -72,52 +106,53 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
-#myBtn{
+.close2 {
+  color: #050505;
+  float: right;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close2:hover,
+.close2:focus {
+  color: rgb(250, 250, 250);
+  text-decoration: none;
+  cursor: pointer;
+}
+#myBtn {
   color: rgba(241, 210, 170, 0.195);
   background-color: rgba(241, 210, 170, 0.195);
-  border:none;
+  border: none;
 }
-#misiva{
+#misiva {
   width: 80px;
   height: 60px;
 }
-#moneda{
-  width: 80px; 
+#misiva2 {
+  width: 80px;
+  height: 60px;
+}
+#moneda {
+  width: 80px;
   height: 50px;
 }
-#superDiv{
+#superDiv {
   color: rgba(0, 0, 0, 0.732);
   background-color: rgba(241, 210, 170, 0.674);
-  border:solid 10px rgba(81, 56, 24, 0.421);
+  border: solid 10px rgba(81, 56, 24, 0.421);
   border-radius: 30px;
   display: flex;
   justify-content: space-around;
-  height:80px;
+  height: 80px;
   width: 600px;
-
-
 }
 
-#monedas-interfaz{
+#monedas-interfaz {
   margin-left: 8px;
   font-size: 3em;
-  color:rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
   border-radius: solid black;
- 
 }
-/*#progressBar{
-    width: 400px;
-    border-radius: 10px;
-    text-align: center;
-    overflow: hidden;
-    background-color: grey;
-    margin-top: 60px;
-    margin-left: 80px;
-    position: absolute;
-   z-index: 999;
-  
-
-  }*/
 
 #progress {
   width: 400px;
@@ -136,26 +171,20 @@ body {
 }
 
 #progress.in-progress::-webkit-progress-value {
-  background-color: #3cb5348b; /* Cambia el color de la barra de progreso cuando está en progreso */
+  background-color: #3cb5348b;
 }
 
-/* #myBar{
-    width: 1%;
-    height: 30px;
-    text-align: center;
-    border-radius: 10px;
-    background-color: green;
-
-  }  
-  */
 #start-btn {
-  background-color: rgb(152, 92, 53);
-  color: white;
-  padding: 30px;
+  background-image: url(../Imagenes/marmol.jpg);
+  opacity: 0.9;
+  color: rgb(0, 0, 0);
+  padding: 10px;
   font-size: 20px;
-  margin-top: 40px;
   border-radius: 10px;
-  margin-bottom: -50px;
+  display: flex;
+  justify-content: center;
+  width: 150px;
+  margin: auto;
 }
 
 .container {
@@ -165,8 +194,7 @@ body {
   align-items: center;
   margin: 50px;
 }
-/* fondo del juego aqui*/
-#divMoneda{
+#divMoneda {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -175,111 +203,81 @@ body {
   top: -60px;
   position: relative;
   display: flex;
-  
   margin: auto;
- /* justify-content: space-between;*/
-
-
-  
-  
-  
-  /*background-image: url("../Imagenes/panel_fondo.png");
-  background-position: center;
-  background-size: cover;*/
   display: none;
-
   color: rgba(241, 210, 170, 0.555);
   background-color: rgba(241, 210, 170, 0.674);
-  border:solid 10px rgba(81, 56, 24, 0.421);
+  border: solid 10px rgba(81, 56, 24, 0.421);
   border-radius: 30px;
-  /*display: flex;*/
-  
-  
   width: 600px;
-  height: 600px;
-
-    /*permite posicionar los elementos de forma absoluta dentro del game-box */
-  overflow: hidden; /* previene que los elementos salgan visualmente del game-box */
- /* user-select: none;*/
-} /* previene que los elementos del game-box sean resaltados al hacer click 
-  
-    /*background-image: url("../Imagenes/fondo.jpg");/
-    background-color:bisque;
-    background-position: center;
-    background-size: cover;
-  
-  }
-  
- */
+  height: 530px;
+  overflow: hidden;
+  z-index: 0;
+}
+#instrucciones-contenedor {
+  position: relative;
+  margin-top: 150px;
+  color: rgba(241, 210, 170, 0.555);
+  background-color: rgba(241, 210, 170, 0.674);
+  border: solid 10px rgba(81, 56, 24, 0.421);
+  border-radius: 30px;
+  width: 660px;
+  height: 310px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+#instrucciones {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: black;
+  font-size: 22px;
+  text-align: justify;
+}
+#escultor-reino {
+  margin-top: -40px;
+  color: black;
+  font-size: 22px;
+  text-align: center;
+  font-weight: bold;
+}
 
 #game-screen,
 #game-over-screen {
-  display: none; /* el elemento desparece temporalmente de la pantalla */
-
+  display: none;
 }
-#texto-fin{
+#texto-fin {
   position: relative;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  
 
   color: rgba(241, 210, 170, 0.555);
   background-color: rgba(241, 210, 170, 0.674);
-  border:solid 10px rgba(81, 56, 24, 0.421);
+  border: solid 10px rgba(81, 56, 24, 0.421);
   border-radius: 20px;
   margin-bottom: 10px;
   width: 600px;
-  height: 820px;
+  height: 870px;
 }
-#letras-fin{
+#letras-fin {
   margin-top: 10px;
 }
-#carcel{
+#carcel {
   color: #050505;
   text-align: center;
   font-size: 2em;
 }
-#fin{
+#fin {
   margin-top: 10px;
 }
-/*BARRAS DE PROGRESO, PILLADO DE QUIZ
-  #progress {
-    width: 100%;
-    background-color: #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    margin-bottom: 5px;
+#reiniciar {
+  margin-top: 20px;
+  background-image: url(../Imagenes/marmol.jpg);
+  opacity: 0.9;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
 }
-
-#progressBar {
-    height: 20px;
-    background-color: red;
-    width: 0%;
-    border-radius: 8px;
-}
-
-#result-progress {
-    width: 100%;
-    background-color: #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    margin-bottom: 5px;
-}
-
-.divider {
-    width: 100%;
-    height: 20px;
-    background-color: #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    margin-bottom: 5px;
-}
-
-#resultProgressBar {
-    width: 100%;
-    height: 20px;
-    background-color: #4caf50;
-    width: 100%;
-    border-radius: 8px;
-}*/

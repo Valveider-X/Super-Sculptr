@@ -3,7 +3,7 @@
 // pantallas
 const splashScreenNode = document.querySelector("#splash-screen");
 const gameScreenNode = document.querySelector("#game-screen");
-const gameOverScreenNode = document.querySelector("#game-over-screen")
+const gameOverScreenNode = document.querySelector("#game-over-screen");
 
 //INTERFAZ
 let dinero = 0;
@@ -11,12 +11,10 @@ let dinero = 0;
 // botones
 const startBtnNode = document.querySelector("#start-btn");
 const botonBarra = document.querySelector("#boton");
+const reinicioBoton = document.querySelector("#reiniciar");
 
 //BARRAS DE PROGRESO
 let barraDeProgreso = 0;
-
-//botonBarra.style.display = "block";
-//botonBarra.style.visibility= "visible"
 
 // game box
 const gameBoxNode = document.querySelector("#game-box");
@@ -31,7 +29,7 @@ function startGame() {
 
   //1. ocultar la pantalla de inicio
   splashScreenNode.style.display = "none";
-  gameOverScreenNode.style.display = "none"
+  gameOverScreenNode.style.display = "none";
 
   //2. mostrar la pantalla de juego
   gameScreenNode.style.display = "flex";
@@ -45,26 +43,15 @@ function startGame() {
   game = new Game();
   game.crearEsculturas();
 
-
   //console.log(game)
   game.start();
-  
- 
-
 }
 
 function incrementarDinero(dineroASumar) {
   dinero += dineroASumar;
   const monedasInterface = document.querySelector("#monedas-interfaz");
   monedasInterface.innerText = dinero;
-  
-
-  };
-
-// progresión barra
-
-//FUNCION DESBLOQUEO
-
+}
 
 //!
 //FUNCIÓN OCULTA - HACIENDA.
@@ -75,118 +62,88 @@ function startCountdown(seconds) {
     counter--;
     if (counter <= 0) {
       clearInterval(timerHacienda);
-      openModal()
+      openModal();
       //window.alert("Hacienda viene a reclamar dinero");
+    }
+  }, 1000);
+}
 
+//FUNCION OCULTA HACIENDA EN BURRO
+function startPayCountdown(seconds) {
+  let counter = seconds;
+  const timerPago = setInterval(() => {
+    counter--;
+    if (counter <= 0) {
+      clearInterval(timerPago);
+      openModalPagando();
+      //window.alert("Hacienda viene a reclamar dinero");
     }
   }, 1000);
 }
 //FUNCIÓN OCULTA - GAMEOVER HACIENDA
+
 function paga(seconds) {
   let counter = seconds;
   const timerPagar = setInterval(() => {
-    //openModalPaga()
     counter--;
     if (counter <= 0) {
       clearInterval(timerPagar);
-      window.alert("Has pagado 100 monedas a Hacienda")
+      window.alert("Has pagado 100 monedas a Hacienda");
       dinero -= 100;
-      if (dinero <= 0){
+      if (dinero <= 0) {
         clearInterval(timerPagar);
-        game.gameOver()
+        game.gameOver();
       }
     }
   }, 1000);
 }
 
-
-
 //* EVENT LISTENERS
 startBtnNode.addEventListener("click", startGame);
-/*botonBarra.addEventListener("click", () => {
-    game.botoncito()
-}) //ver como colocar la class Button
-console.log("Evento click asignado correctamente al botón")*/
-
-/*
-function muelte(segundos) {
-  let pacoCounter = segundos;
-  const timer = setInterval(() => {
-    pacoCounter--;
-    if (pacoCounter <= 0) {
-      clearInterval(timer);
-      window.alert("Dale F5 pa continuar");
-    }
-  }, 10);
-}*/
+reiniciar.addEventListener("click", () => {
+  window.location.reload();
+});
 
 //Modal Hacienda
-let modal = document.getElementById("myModal") 
-let btn = document.getElementById("myBtn") //abre
-let span = document.getElementsByClassName("close")[0] //cierra
+let modal = document.getElementById("myModal");
+let btn = document.getElementById("myBtn"); //abre
+let span = document.getElementsByClassName("close")[0]; //cierra
 
-btn.onclick = function(){ //abre en el click
-  modal.style.display = "block"
-}
-span.onclick = function(){
-  modal.style.display = "none"
-}
-window.onclick = function(event){
-  if (event.target == modal){
-    modal.style.display = "none"
+btn.onclick = function () {
+  //abre en el click
+  modal.style.display = "block";
+};
+span.onclick = function () {
+  modal.style.display = "none";
+};
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
   }
-}
-function openModal(){
-  modal.style.display = "block"
+};
+function openModal() {
+  modal.style.display = "block";
 }
 
 //Modal Pagando
 
-/*
-function modalPaga(){
-  let modal = document.createElement('div')
-  let contenidoModal = document.createElement('div') //carta
-  let cerrarModal = document.createElement('span')
+let modalPagando = document.getElementById("myModalPay");
+let btnPagando = document.getElementById("myBtn2"); //abre
+let spanPagando = document.getElementsByClassName("close2")[0]; //cierra
 
-  modal.className = 'pagando-hacienda'
-  contenidoModal.className = 'contenido-hacienda'
-  cerrarModal.className = 'cerrar-btn'
-  cerrarModal.innerHTML = '&times;'
-
-  let textoModal = document.createElement('p')
-  textoModal.className = "texto-hacienda"
-  textoModal.textContent = "Ha llegado el cobrador del Frac: En nombre del Rey y de Hacienda te reclama 100 monedas"
-
-  contenidoModal.appendChild(cerrarModal)
-  contenidoModal.appendChild(textoModal)
-  modal.appendChild(contenidoModal)
-
-  cerrarModal.addEventListener("click", function(){
-    modal.style.display = "none"
-  })
-  document.body.appendChild(modal)
-
+btnPagando.onclick = function () {
+  //abre en el click
+  modalPagando.style.display = "block";
 };
-function openModalPaga(){
-    contenidoModal.style.diplay = "block"
-  }*/
-  //modalPaga.style.display = "block"
-  /*
-  let modal = document.querySelector(".pagando-hacienda")
-  modal.style.display = "block"*/
+spanPagando.onclick = function () {
+  modalPagando.style.display = "none";
+};
+window.onclick = function (event) {
+  if (event.target == modalPagando) {
+    modalPagando.style.display = "none";
+  }
+};
 
-
-
-
-
-
-
-
-//cuando le das a la X del span cierra el modal
-
-
-//RESTART CUTRE HTML
-/*boton restart en html document.GetElementById(xxx)
-luego en la función de restart meter addEventlistener(click)
-window.location.reload()
-*/
+function openModalPagando() {
+  modalPagando.style.display = "block";
+}

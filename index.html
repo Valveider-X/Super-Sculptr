@@ -10,12 +10,8 @@
     <!-- PANTALLA DE INICIO -->
     <h1 id="logo"><img src="./Imagenes/Logo.png"></h1>
      <div id="splash-screen" class="container"> 
-       <!-- <img src="./Imagenes/placeholder inicio.jpg" width="500" alt="logo"> 
-        <p>Conforme a lo que el sufijo -cracia indica, la meritocracia es, estrictamente hablando, un sistema de gobierno basado en la habilidad (mérito) en vez de la riqueza o posición social.</p>
-        <p>Todo el mundo sabe que para hacerte rico debes trabajar duro.
-        <br>Dijo nadie Nunca.
-        </p>-->
-        <button id="start-btn">¡A Esculpir!</button>
+        <div id="instrucciones-contenedor"><p id="instrucciones">Tras una larga y cruenta guerra el pueblo está económicamente en ruinas, es díficil subsistir y para colmo los cobradores del rey van de pueblo en pueblo reclamando impuestos.<br><br>Para subsistir en estos oscuros tiempos debes emplear todo tu talento vendiendo esculturas, recuerda..<br><br><p id="escultor-reino">Eres el escultor del reino.</p>
+        <button id="start-btn">¡A Esculpir!</button></div>
         <audio id="musica" controls autoplay muted><source src="./audio/music.mp3" type="audio/mpeg"></audio>
       </div> 
       
@@ -24,20 +20,21 @@
         </div><div id="divMoneda"> 
         
       <div id="game-screen" class="container">
-        
         <div id="superDiv"><button id="myBtn"><img id="misiva" src="./Imagenes/misiva.png"></button>
       <div id="myModal" class="modal">
         <div class="modal-content"><span class="close">&times;</span><p id="texto-misiva">El Rey reclama el dinero de sus súbditos.<br>Para ello ha creado el ministerio de Hacienda.<br>El cobrador de Hacienda vendrá a por 100 monedas de oro próximamente, ten listo el pago.</p></div>
       </div><div id="divMoneda">
+        <div id="superDiv2"> <button id="myBtn2"><img id="misiva2" src="./Imagenes/sculpt3.png"></button>
+          <div id="myModalPay" class="modalPay">
+            <div class="modal-content2"><span class="close2">&times;</span><p id="texto-hacienda">Un señor de negro encima de un burro te reclama dinero en nombre del rey,<br> que injusto, pero así es la vida...</p> </div> </div>
+
+        </div>
       <img id="moneda" src="./Imagenes/monedas.png"><p id="monedas-interfaz">  0</p></div></div>
       </header>
         
 
         <!-- Elementos del juego como puntuación, vidas, etc deberia ir aqui (dentro del game-screen pero fuera del game-box) -->
         <div id="game-box">
-            <!--<div id="progressBar"><div id="myBar"></div>       
-            </div>
-        <button id="botonBarra">Esculpir</button>-->
       </div>
 <audio id="m" src="./audio/cansado.mp3"></audio>
 <button id="boton" onclick="document.getElementById('m').play()">----</button>
@@ -52,8 +49,9 @@
         <div id= "texto-fin"><img id="letras-fin"src="./Imagenes/titulo-gameover.png" width="500" alt="game over">
           <p id="carcel">¡Te has quedado sin dinero!<br>
           Le debes dinero a Hacienda, pagarás tus deudas en la cárcel.</p>
-        <img id="fin" src="./Imagenes/GameOver.jpg" width="500" alt="Game Over screen"></div>
-      </div>
+        <img id="fin" src="./Imagenes/GameOver.jpg" width="500" alt="Game Over screen">
+        <button id="reiniciar">¿Volver a Intentar?</button> 
+      </div></div>
 
 
     
