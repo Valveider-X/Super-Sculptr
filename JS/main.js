@@ -89,6 +89,7 @@ function paga(seconds) {
     counter--;
     if (counter <= 0) {
       clearInterval(timerPagar);
+      window.alert("Has pagado 100 monedas a Hacienda")
       dinero -= 100;
       if (dinero <= 0){
         clearInterval(timerPagar);

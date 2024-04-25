@@ -25,21 +25,7 @@ body {
   background-color: rgb(212, 180, 140);
 }
 
-/*#pagando-hacienda{
 
-}*/
-.contenido-hacienda{
-  background-image: url("../Imagenes/misiva.png");
-  margin: 15% auto;
-  padding: 20px;
-  width: 450px; 
-  height: 300px
-
-}
-/*.cerrar-btn{
-
-}
-*/
 
 #boton {
   color: rgba(241, 210, 170, 0.195);
@@ -48,22 +34,23 @@ body {
   /*display: none;*/
 }
 .modal{
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
   top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4); 
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 .modal-content {
   background-image: url("../Imagenes/misiva.png");
-  margin: 15% auto; 
+  margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   width: 450px; 
-  height: 300px
+  height: 300px/* Could be more or less, depending on screen size */
 }
 #texto-misiva{
   margin-top: 80px;
@@ -228,8 +215,34 @@ body {
 #game-screen,
 #game-over-screen {
   display: none; /* el elemento desparece temporalmente de la pantalla */
-}
 
+}
+#texto-fin{
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  
+
+  color: rgba(241, 210, 170, 0.555);
+  background-color: rgba(241, 210, 170, 0.674);
+  border:solid 10px rgba(81, 56, 24, 0.421);
+  border-radius: 20px;
+  margin-bottom: 10px;
+  width: 600px;
+  height: 820px;
+}
+#letras-fin{
+  margin-top: 10px;
+}
+#carcel{
+  color: #050505;
+  text-align: center;
+  font-size: 2em;
+}
+#fin{
+  margin-top: 10px;
+}
 /*BARRAS DE PROGRESO, PILLADO DE QUIZ
   #progress {
     width: 100%;

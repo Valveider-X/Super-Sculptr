@@ -68,7 +68,7 @@ class Game {
   start() {
     //!
     startCountdown(10);
-    paga(15);
+    paga(20);
     
 
     this.gameIntervalId = setInterval(() => {
