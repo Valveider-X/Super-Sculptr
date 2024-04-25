@@ -30,10 +30,6 @@ class Game {
       barrasEscultura.chequeoBotones()  
     }
     
-    /*this.barrasArr.forEach(escultura => {
-      escultura.chequeoBotones()
-    })*/
-    
 
   }
   botoncito() {
@@ -44,15 +40,18 @@ class Game {
   }
 
   //todo accion de game over
-  /*gameOver(){
+  gameOver(){
       //1 - todos los intervalos deben detenerse
+      
       clearInterval(this.gameIntervalId)
-      clearInterval(this.tuberiasIntervalId)
+      clearInterval(this.id)
+      clearInterval(this.timerHacienda)
       //2- ocultar la pantalla de juego
       gameScreenNode.style.display = "none"
+      gameBoxNode.style.display = "none";
       //3- mostrar la pantalla final
       gameOverScreenNode.style.display = "flex"
-    }*/
+    }
   
   
     //* BONUS
@@ -68,7 +67,8 @@ class Game {
 
   start() {
     //!
-    //startCountdown(10);
+    startCountdown(10);
+    paga(15);
     
 
     this.gameIntervalId = setInterval(() => {

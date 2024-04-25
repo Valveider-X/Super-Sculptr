@@ -3,8 +3,7 @@
 // pantallas
 const splashScreenNode = document.querySelector("#splash-screen");
 const gameScreenNode = document.querySelector("#game-screen");
-
-//const gameOverScreenNode = document.querySelector("#game-over-screen")
+const gameOverScreenNode = document.querySelector("#game-over-screen")
 
 //INTERFAZ
 let dinero = 0;
@@ -32,6 +31,7 @@ function startGame() {
 
   //1. ocultar la pantalla de inicio
   splashScreenNode.style.display = "none";
+  gameOverScreenNode.style.display = "none"
 
   //2. mostrar la pantalla de juego
   gameScreenNode.style.display = "flex";
@@ -68,18 +68,35 @@ function incrementarDinero(dineroASumar) {
 
 //!
 //FUNCIÓN OCULTA - HACIENDA.
-/*
+
 function startCountdown(seconds) {
   let counter = seconds;
-  const timer = setInterval(() => {
+  const timerHacienda = setInterval(() => {
     counter--;
     if (counter <= 0) {
-      clearInterval(timer);
+      clearInterval(timerHacienda);
       window.alert("Hacienda viene a reclamar dinero");
     }
   }, 1000);
 }
-*/
+//FUNCIÓN OCULTA - GAMEOVER HACIENDA
+function paga(seconds) {
+  let counter = seconds;
+  const timerPagar = setInterval(() => {
+    counter--;
+    if (counter <= 0) {
+      clearInterval(timerPagar);
+      dinero -= 100;
+      if (dinero <= 0){
+        clearInterval(timerPagar);
+        game.gameOver()
+      }
+    }
+  }, 1000);
+}
+
+
+
 //* EVENT LISTENERS
 startBtnNode.addEventListener("click", startGame);
 /*botonBarra.addEventListener("click", () => {

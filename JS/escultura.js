@@ -122,11 +122,8 @@ class Escultura {
         botonNode.style.pointerEvents = "auto"
         botonNode.style.opacity = "1"
       }
-        
-
       })
       
-      //console.log("botón desactivado",boton)
     }
     /*if (this.dineroASumar >= 150){
       console.log("activando boton 04")
@@ -164,27 +161,5 @@ class Escultura {
       //}
     }*/
   }
-  
-
-  /*progresoBarra(miliSegundos){ //cuando llamemos a la funcion hay que declarar el tiempo de progreso barra
-      if (barraDeProgreso == 0){
-          barraDeProgreso = 1
-          let elementoBarra = document.getElementById("myBar")
-          let width = 1
-          let id = setInterval(frame, miliSegundos) //la duración de la barra 
-  
-          function frame(){
-              if (width >= 100){
-                  clearInterval(id)
-                  barraDeProgreso = 0
-                  incrementarDinero()
-              }else{
-                  width++
-                  elementoBarra.style.width = width + "%"
-              }
-          }
-      }
-  }*/
-//}
 
 

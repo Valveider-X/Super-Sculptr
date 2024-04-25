@@ -11,14 +11,14 @@ body {
   margin-left: 100px;
 }
 .musica{
-  margin-left: 170px;
+  margin-left: 180px;
   
-  /*display: flex;
+ /*display: flex;
   align-items: center;*/
-  
-  
-  
 
+}
+#musica::-webkit-media-controls-panel { /*cambias lo de dentro del reproductor*/
+  background-color: rgb(212, 180, 140);
 }
 #boton {
   color: rgba(241, 210, 170, 0.195);
