@@ -56,7 +56,7 @@ function startGame() {
 function incrementarDinero(dineroASumar) {
   dinero += dineroASumar;
   const monedasInterface = document.querySelector("#monedas-interfaz");
-  monedasInterface.innerText = "Monedas: " + dinero;
+  monedasInterface.innerText = dinero;
   
 
   };
@@ -75,7 +75,9 @@ function startCountdown(seconds) {
     counter--;
     if (counter <= 0) {
       clearInterval(timerHacienda);
-      window.alert("Hacienda viene a reclamar dinero");
+      openModal()
+      //window.alert("Hacienda viene a reclamar dinero");
+
     }
   }, 1000);
 }
@@ -83,6 +85,7 @@ function startCountdown(seconds) {
 function paga(seconds) {
   let counter = seconds;
   const timerPagar = setInterval(() => {
+    //openModalPaga()
     counter--;
     if (counter <= 0) {
       clearInterval(timerPagar);
@@ -115,3 +118,74 @@ function muelte(segundos) {
     }
   }, 10);
 }*/
+
+//Modal Hacienda
+let modal = document.getElementById("myModal") 
+let btn = document.getElementById("myBtn") //abre
+let span = document.getElementsByClassName("close")[0] //cierra
+
+btn.onclick = function(){ //abre en el click
+  modal.style.display = "block"
+}
+span.onclick = function(){
+  modal.style.display = "none"
+}
+window.onclick = function(event){
+  if (event.target == modal){
+    modal.style.display = "none"
+  }
+}
+function openModal(){
+  modal.style.display = "block"
+}
+
+//Modal Pagando
+
+/*
+function modalPaga(){
+  let modal = document.createElement('div')
+  let contenidoModal = document.createElement('div') //carta
+  let cerrarModal = document.createElement('span')
+
+  modal.className = 'pagando-hacienda'
+  contenidoModal.className = 'contenido-hacienda'
+  cerrarModal.className = 'cerrar-btn'
+  cerrarModal.innerHTML = '&times;'
+
+  let textoModal = document.createElement('p')
+  textoModal.className = "texto-hacienda"
+  textoModal.textContent = "Ha llegado el cobrador del Frac: En nombre del Rey y de Hacienda te reclama 100 monedas"
+
+  contenidoModal.appendChild(cerrarModal)
+  contenidoModal.appendChild(textoModal)
+  modal.appendChild(contenidoModal)
+
+  cerrarModal.addEventListener("click", function(){
+    modal.style.display = "none"
+  })
+  document.body.appendChild(modal)
+
+};
+function openModalPaga(){
+    contenidoModal.style.diplay = "block"
+  }*/
+  //modalPaga.style.display = "block"
+  /*
+  let modal = document.querySelector(".pagando-hacienda")
+  modal.style.display = "block"*/
+
+
+
+
+
+
+
+
+//cuando le das a la X del span cierra el modal
+
+
+//RESTART CUTRE HTML
+/*boton restart en html document.GetElementById(xxx)
+luego en la función de restart meter addEventlistener(click)
+window.location.reload()
+*/

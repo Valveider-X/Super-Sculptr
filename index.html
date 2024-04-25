@@ -16,14 +16,20 @@
         <br>Dijo nadie Nunca.
         </p>-->
         <button id="start-btn">¡A Esculpir!</button>
+        <audio id="musica" controls autoplay muted><source src="./audio/music.mp3" type="audio/mpeg"></audio>
       </div> 
       
       <!-- PANTALLA DE JUEGO -->
       <header>
+        </div><div id="divMoneda"> 
+        
       <div id="game-screen" class="container">
         
-        <p id="monedas-interfaz">Monedas: 0</p>
-        <p id="hacienda">Siguiente Objetivo: 0</p>
+        <div id="superDiv"><button id="myBtn"><img id="misiva" src="./Imagenes/misiva.png"></button>
+      <div id="myModal" class="modal">
+        <div class="modal-content"><span class="close">&times;</span><p id="texto-misiva">El Rey reclama el dinero de sus súbditos.<br>Para ello ha creado el ministerio de Hacienda.<br>El cobrador de Hacienda vendrá a por 100 monedas de oro próximamente, ten listo el pago.</p></div>
+      </div><div id="divMoneda">
+      <img id="moneda" src="./Imagenes/monedas.png"><p id="monedas-interfaz">  0</p></div></div>
       </header>
         
 
@@ -32,10 +38,10 @@
             <!--<div id="progressBar"><div id="myBar"></div>       
             </div>
         <button id="botonBarra">Esculpir</button>-->
-        
-</div><audio id="m" src="./audio/cansado.mp3"></audio>
+      </div>
+<audio id="m" src="./audio/cansado.mp3"></audio>
 <button id="boton" onclick="document.getElementById('m').play()">----</button>
-<audio id="musica" controls autoplay muted><source src="./audio/music.mp3" type="audio/mpeg"></audio>
+
            <!--Los elementos del juego serán añadidos desde JS con manipulación de DOM -->
          
         </div>
@@ -56,3 +62,4 @@
     <link rel="style.css">
 </body>
 </html>
+

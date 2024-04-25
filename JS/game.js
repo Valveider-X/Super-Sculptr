@@ -18,7 +18,7 @@ class Game {
       let incrementoPosicion = posicionBarra + i * 100;
       let incrementoBoton = posicionBoton + i * 100;
       let dineroASumar = valoresDinero[i];
-      console.log(dineroASumar);
+      //console.log(dineroASumar);
 
       let barrasEscultura = new Escultura(
         incrementoTiempo,
@@ -36,7 +36,7 @@ class Game {
     this.escultura.progresoBarra(100);
   
     
-    console.log(`Dinero actualizado: ${dinero}`);
+    //console.log(`Dinero actualizado: ${dinero}`);
   }
 
   //todo accion de game over
