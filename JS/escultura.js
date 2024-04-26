@@ -120,39 +120,4 @@ class Escultura {
       }
     });
   }
-  /*if (this.dineroASumar >= 150){
-      console.log("activando boton 04")
-      todosLosBotones[4].disabled = false
-      todosLosBotones[4].style.pointerEvents = "auto"
-      todosLosBotones[4].style.opacity = "1"
-      console.log(`sumando ${this.dineroASumar}`)
-      //console.log("todos los botones desactivados")
-    }else if (this.dineroASumar >= 100){
-      console.log("activando boton 03")
-      todosLosBotones[3].disabled = false
-      todosLosBotones[3].style.pointerEvents = "auto"
-      todosLosBotones[3].style.opacity = "1"
-      console.log(`sumando ${this.dineroASumar}`)
-    }else if (this.dineroASumar >= 50){
-      console.log("activando boton 02")
-      todosLosBotones[2].disabled = false
-      todosLosBotones[2].style.pointerEvents = "auto"
-      todosLosBotones[2].style.opacity = "1"
-      console.log(`sumando ${this.dineroASumar}`)
-    }else if (this.dineroASumar >= 10){
-      console.log("activando boton 01")
-      todosLosBotones[1].disabled = false
-      todosLosBotones[1].style.pointerEvents = "auto"
-      todosLosBotones[1].style.opacity = "1"
-      console.log(`sumando ${this.dineroASumar}`)
-    }else if (this.dineroASumar >= 0){
-      console.log("activando boton 0")
-      
-        todosLosBotones[0].disabled = false
-        todosLosBotones[0].style.pointerEvents = "auto"
-        todosLosBotones[0].style.opacity = "1"
-        console.log(`sumando ${this.dineroASumar}`)
-        // a todosLosBotones[0].disabled = false
-      //}
-    }*/
 }

@@ -9,13 +9,16 @@ body {
   text-align: center;
 }
 #musica {
-  margin-left: auto;
-  position: absolute;
-  bottom: 0;
+  display: flex;
+  margin: auto;
+  
 }
 #musica::-webkit-media-controls-panel {
   /*cambias lo de dentro del reproductor*/
   background-color: rgb(212, 180, 140);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #boton {

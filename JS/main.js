@@ -5,6 +5,8 @@ const splashScreenNode = document.querySelector("#splash-screen");
 const gameScreenNode = document.querySelector("#game-screen");
 const gameOverScreenNode = document.querySelector("#game-over-screen");
 
+//SONIDOS
+const musica = document.querySelector("#musica");
 //INTERFAZ
 let dinero = 0;
 
@@ -25,7 +27,12 @@ let game; // vacio porque aun no ha iniciado el juego*/
 
 //* FUNCIONES GLOBALES DE CAMBIO DE ESTADO E INICIO
 function startGame() {
-  console.log("iniciando el juego");
+  //console.log("iniciando el juego");
+
+  //0. Musica. 
+  musica.volume = 0.05; 
+  musica.play();
+  musica.loop = true;
 
   //1. ocultar la pantalla de inicio
   splashScreenNode.style.display = "none";
