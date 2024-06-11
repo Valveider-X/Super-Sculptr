@@ -1,5 +1,3 @@
-MONDONGO.
-
 # SUPER SCULPTR
 
 ## [Play the Game!](https://valveider-x.github.io/Super-Sculptr/)
